@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click the Target</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="main-menu">
+    <h1>Click the Target 🎯</h1>
+    <p>Оберіть рівень складності:</p>
+    <button onclick="startGame('easy')">Простий</button>
+    <button onclick="startGame('hard')">Складний</button>
+  </div>
+
+  <div id="game-screen" style="display: none;">
+    <p>Час: <span id="time">0</span> сек | Очки: <span id="score">0</span> | Рекорд: <span id="record">0</span></p>
+    <button id="restart-btn">На головне меню</button>
+    <div id="game"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

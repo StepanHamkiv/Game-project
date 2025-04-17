@@ -1,0 +1,186 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ececec, #d4c4c4);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#game {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.target {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at center, #ff5757, #c71f1f);
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.target:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 600px) {
+  #game {
+      width: 95%;
+      height: 300px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  button {
+      width: 80%;
+      margin-top: 10px;
+  }
+}
+
+#result-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+#result-modal.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.modal-content p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.modal-content button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.modal-content button:hover {
+  transform: scale(1.05);
+}
+
+.modal-content button:active {
+  transform: scale(0.95);
+}
+
+#main-menu {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ececec, #d4c4c4);
+  z-index: 10;
+}
+
+#main-menu h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#main-menu p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+#main-menu button {
+  margin: 10px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#main-menu button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
